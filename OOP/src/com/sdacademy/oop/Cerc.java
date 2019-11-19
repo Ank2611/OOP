@@ -4,6 +4,7 @@ public class Cerc {
     double raza;
 
     public Cerc ( double raza ) {
+
         this.raza = raza;
     }
 
