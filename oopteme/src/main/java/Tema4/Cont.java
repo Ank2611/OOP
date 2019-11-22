@@ -51,7 +51,7 @@ public class Cont {
     }
 
     public double getMonthlyInterestRate() {
-        return (this.sold * 0.1) / 100;
+        return ((this.sold * 0.1) / 100) / 12;
     }
 
     public double retrag( int suma ) {

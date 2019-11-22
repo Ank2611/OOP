@@ -16,4 +16,10 @@ public class TestCont {
         //System.out.println("depozit " + c1.depozit(250));
         Assert.assertEquals(350.0, c1.depozit(150), 0.0);
     }
+
+    @Test
+    public void getMonthlyInterestRateTest(){
+        //System.out.println("Dob lunara " + c1.getMonthlyInterestRate());
+        Assert.assertEquals(0.0083, c1.getMonthlyInterestRate(), 0.0);
+    }
 }
