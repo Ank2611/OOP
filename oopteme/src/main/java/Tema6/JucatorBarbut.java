@@ -14,10 +14,12 @@ public class JucatorBarbut {
     }
 
     public int getDicesResult() {
+
         return dicesResult;
     }
 
     public void setDicesResult( int dicesResult ) {
+
         this.dicesResult = dicesResult;
     }
 
@@ -26,31 +28,41 @@ public class JucatorBarbut {
     }
 
     public void setDice1( Zar dice1 ) {
+
         this.dice1 = dice1;
     }
 
     public Zar getDice2() {
+
         return dice2;
     }
 
     public void setDice2( Zar dice2 ) {
+
         this.dice2 = dice2;
     }
 
     public int rollDice() {
-        int randomResult = 0;
+        int randomResult1 = 0;
+        int randomResult2 = 0;
         int diceResult = 0;
         // define the range
         int max = 6;
         int min = 1;
         int range = max - min + 1;
         //for (int i = 0; i < 6; i++) {
-        randomResult = (int) (Math.random() * range) + min;
-        System.out.println(randomResult);
+        randomResult1 = (int) (Math.random() * range) + min;
+        randomResult2 = (int) (Math.random() * range) + min;
+//        System.out.println("Zarul de la player 1 " + (randomResult1));
+//        System.out.println("Zarul de la player 2 " + (randomResult2));
         //}
-        int dice1Result = dice1.getDiceValue(randomResult);
-        int dice2Result = dice2.getDiceValue(randomResult);
-        System.out.println("zar1 " + dice1Result + " zar2 " + dice2Result);
-        return diceResult = dice1Result + dice2Result;
+        if ((randomResult1 < max && randomResult1>=min) && (randomResult2 < max && randomResult2>=min)) {
+            int dice1Result = dice1.getDiceValue(randomResult1);
+            int dice2Result = dice2.getDiceValue(randomResult2);
+            diceResult = dice1Result + dice2Result;
+        }
+
+//        System.out.println("zar1 " + dice1Result + " zar2 " + dice2Result);
+        return diceResult;
     }
 }

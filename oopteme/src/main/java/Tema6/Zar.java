@@ -4,6 +4,7 @@ public class Zar {
     private int[] values = {1, 2, 3, 4, 5, 6};
 
     public int[] getValues() {
+
         return values;
     }
 
