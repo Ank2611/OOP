@@ -9,6 +9,9 @@ public class Apartament {
         this.numeFamilie = numeFamilie;
     }
 
+    public Apartament() {
+    }
+
     public int getNrAp() {
         return nrAp;
     }

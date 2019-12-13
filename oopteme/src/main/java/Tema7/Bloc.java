@@ -1,14 +1,17 @@
 package Tema7;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Bloc {
     private String numeBloc;
-    private Etaj etaj;
-    private Apartament ap;
+    private List<Etaj> etaj = new ArrayList<Etaj>();
+    private List<Apartament> apt = new ArrayList<Apartament>();
+
 
     public Bloc( String numeBloc ) {
         this.numeBloc = numeBloc;
-        this.etaj = etaj;
-        this.ap = ap;
     }
 
     public String getNumeBloc() {
@@ -19,28 +22,31 @@ public class Bloc {
         this.numeBloc = numeBloc;
     }
 
-    public Etaj getEtaj() {
+    public List<Etaj> getEtaj() {
         return etaj;
     }
 
-    public void setEtaj( Etaj etaj ) {
-        this.etaj = etaj;
+
+    public List<Apartament> getApt() {
+        return apt;
     }
 
-    public Apartament getAp() {
-        return ap;
+    public void addEtaj( Etaj et ) {
+        etaj.add(et);
     }
 
-    public void setAp( Apartament ap ) {
-        this.ap = ap;
-    }
+    public void afiseazaBloc() {
 
-    public void adaugaEtaj( int et ) {
-        System.out.print("et-" + et + ":||");
-    }
+        for (Etaj et1 : etaj) {
+            System.out.println();
+            System.out.println("et-" + et1.getNrEtaj() + ":||");
+            et1.afiseazaEtaj();
+        }
 
-    public void afiseazaBloc( String numeBloc ) {
-        System.out.println("===========================");
-        System.out.println("Blocul : " + this.numeBloc);
+
     }
 }
+
+
+
+
